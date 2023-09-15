@@ -60,7 +60,7 @@ inflation %>%
             .groups = "drop") %>% 
   pivot_longer(c(expectation, perception)) %>% 
   ungroup() %>% 
-  ggplot() + theme_minimal() + labs(color=NULL) +
+  ggplot() + theme_minimal() + labs(color=NULL) + scale_color_manual(values=c("darkblue", "darkgreen"))+
   geom_line(aes(date, value, color = name)) +
   NULL
 ```
